@@ -47,16 +47,16 @@ python -m pip install -r requirements.txt
 
 ## 2. Add Your API Key
 
-Copy `.env.example` to `.env`, then replace the placeholder with your real API
-key:
+This public repo includes a placeholder `.env` file for class setup. Replace the
+placeholder with your real API key on your own machine:
 
 ```env
 MODEL_SERVICE_API_KEY=PASTE_YOUR_API_KEY_HERE
 MODEL_SERVICE_BASE_URL=https://model.service-inference.ai/v1
 ```
 
-Keep `.env` private. Do not paste the API key into the Python script, a notebook,
-or a README file.
+After you add a real key, keep that modified `.env` private. Do not paste the
+API key into the Python script, a notebook, a README file, or a public commit.
 
 ## 3. Check The Model List
 
