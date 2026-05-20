@@ -1,0 +1,31 @@
+﻿usage: test_model_service_vision.py [-h] [--image IMAGE] [--prompt PROMPT]
+                                    [--model MODEL] [--list-models]
+                                    [--base-url BASE_URL] [--output OUTPUT]
+                                    [--timeout TIMEOUT]
+
+Test the OpenAI-compatible model service with a local image.
+
+options:
+  -h, --help           show this help message and exit
+  --image IMAGE        Image file to send. Relative paths are resolved from
+                       this folder. Default: construction_site.png
+  --prompt PROMPT      Question or instruction to send with the image.
+  --model MODEL        Model id to call. Use --list-models to see examples.
+                       Default: gpt-5.5
+  --list-models        Print model ids copied from the provider website
+                       screenshots.
+  --base-url BASE_URL  OpenAI-compatible API base URL. Usually set this in
+                       .env.
+  --output OUTPUT      Optional text file where the model response or model
+                       list will be saved.
+  --timeout TIMEOUT    Request timeout in seconds. Default: 120.
+
+examples:
+  python .\test_model_service_vision.py --list-models
+  python .\test_model_service_vision.py --model gpt-5.5
+  python .\test_model_service_vision.py --model gemini-2.5-flash
+  python .\test_model_service_vision.py --model claude-sonnet-4-6
+  python .\test_model_service_vision.py --model deepseek-v4-pro
+  python .\test_model_service_vision.py --model glm-5.1 --prompt "Describe the image, then summarize it in three bullet points."
+  python .\test_model_service_vision.py --model gpt-5.5 --image .\test_images\drawing1.png
+  python .\test_model_service_vision.py --model gpt-5.5 --output .\example_outputs\my_run.txt

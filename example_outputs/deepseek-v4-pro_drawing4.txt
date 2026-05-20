@@ -1,0 +1,5 @@
+The image is a CDC bar chart titled "Trends in Pertussis Cases in the United States," displaying annual whooping cough case counts from 1980 to 2023. The y-axis ranges from 0 to 70,000 cases, and the x-axis marks each year. Bars for 1980–1999 are light blue, 2000–2019 dark blue, and 2020–2023 orange. A footnote notes 2023 data are preliminary. The chart shows a long-term rise in cases with periodic peaks, most notably a sharp spike in 2012 and a dramatic surge in 2023 exceeding 60,000 cases—the highest on record.
+
+- Pertussis cases have trended upward since the 1980s, with major outbreaks in 2012 (~50,000 cases) and a record-high preliminary count in 2023 (>60,000).
+- The post-2000 era (dark blue bars) consistently sees higher case numbers than the 1980–1999 period, reflecting increased incidence or detection.
+- The 2023 spike far surpasses all previous years, highlighting a severe resurgence that may be linked to waning immunity, vaccine gaps, or improved reporting.

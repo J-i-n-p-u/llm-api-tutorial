@@ -1,0 +1,18 @@
+## Image Description
+
+This is a **architectural floor plan** for a single-story house, drawn at a scale of **1:50 on A3**, dated **October 2023**. The overall building footprint measures **10.0m × 10.0m**. The plan includes detailed room labels, square meterage, furniture layout, doors, windows, and a legend identifying walls, doors, windows, plumbing, flooring, and tiles.
+
+### Rooms shown:
+- **Living/Dining Area** – 34.5 m² (sofa, chairs, dining table)
+- **Bedroom** – 15.3 m² (bed, two wardrobes, window)
+- **Kitchen** – 11.0 m² (cooktop, fridge, sink)
+- **Bathroom** – 5.8 m² (toilet, basin, shower/bath)
+- **Entrance Hall** – 7.2 m² (front door entry)
+
+---
+
+## Three-Bullet Summary
+
+- 🏠 **Single-story, 10m × 10m home** with five distinct spaces: a large open living/dining area, one bedroom, a kitchen, bathroom, and entrance hall.
+- 📐 **The living/dining area dominates** at 34.5 m², while functional spaces (kitchen, bathroom, hallway) are compact and efficiently arranged along the lower and right portions of the plan.
+- 🪟 **The plan includes detailed architectural notations**, including window placements (WIN), wall thicknesses (250mm), door swings, plumbing fixtures, and a full legend for construction reference.
