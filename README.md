@@ -4,8 +4,59 @@ This folder is a small, student-friendly tutorial for making an API call to an
 OpenAI-compatible model service. The main script sends a local image to a model
 and prints the model's answer.
 
+We are using an API provider from [TokenMart](https://thetokenmart.ai/). The
+core workflow is the same as calling OpenAI's API or Anthropic's API: create a
+client with an API key and base URL, choose a model id, send messages, and read
+the response.
+
+If you are already comfortable calling OpenAI or Anthropic APIs, you probably do
+not need this tutorial. The main things you need are the API key, base URL, and
+model id.
+
+Minimal OpenAI-style example:
+
+```python
+from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR_API_KEY",
+    base_url="https://model.service-inference.ai/v1",
+)
+
+response = client.chat.completions.create(
+    model="gpt-5.5",
+    messages=[{"role": "user", "content": "Hello!"}],
+)
+
+print(response.choices[0].message.content)
+```
+
+Minimal Anthropic-style example:
+
+```python
+from anthropic import Anthropic
+
+client = Anthropic(
+    api_key="YOUR_API_KEY",
+    base_url="https://model.service-inference.ai",
+)
+
+message = client.messages.create(
+    model="gpt-5.5",
+    max_tokens=1024,
+    messages=[{"role": "user", "content": "Hello!"}],
+)
+
+print(message.content[0].text)
+```
+
+If any part of this workflow is unfamiliar, you can paste this repo link, this
+README, or a specific command into ChatGPT or another large language model and
+ask it to explain the API call step by step.
+
 By the end, you should be able to:
 
+- clone this repo to your own computer;
 - set up a Python environment;
 - keep your API key outside the code;
 - choose a model id;
@@ -14,7 +65,18 @@ By the end, you should be able to:
 
 The main file is `test_model_service_vision.py`.
 
-## 1. Set Up Python
+## 1. Clone This Repo
+
+First, clone this repository to your computer and enter the folder:
+
+```powershell
+git clone https://github.com/J-i-n-p-u/llm-api-tutorial.git
+cd llm-api-tutorial
+```
+
+All commands below should be run from this folder.
+
+## 2. Set Up Python
 
 Use either `venv` or `conda`. You only need one of these options.
 
@@ -45,7 +107,7 @@ If you already have a Python environment, just install the dependency:
 python -m pip install -r requirements.txt
 ```
 
-## 2. Add Your API Key
+## 3. Add Your API Key
 
 This public repo includes a placeholder `.env` file for class setup. Replace the
 placeholder with your real API key on your own machine:
@@ -58,7 +120,7 @@ MODEL_SERVICE_BASE_URL=https://model.service-inference.ai/v1
 After you add a real key, keep that modified `.env` private. Do not paste the
 API key into the Python script, a notebook, a README file, or a public commit.
 
-## 3. Check The Model List
+## 4. Check The Model List
 
 Before making an API call, list the model ids:
 
@@ -73,7 +135,7 @@ The same list is also saved in:
 
 Use the model id exactly as printed.
 
-## 4. Run Your First API Call
+## 5. Run Your First API Call
 
 Run the default example:
 
@@ -94,7 +156,7 @@ To save the response, add `--output`:
 python .\test_model_service_vision.py --output .\example_outputs\my_first_run.txt
 ```
 
-## 5. Try Different Models And Images
+## 6. Try Different Models And Images
 
 The examples below use the same basic pattern:
 
@@ -151,7 +213,7 @@ Override the API base URL from the command line:
 python .\test_model_service_vision.py --base-url https://model.service-inference.ai/v1 --model gpt-5.5 --prompt "Describe the image, then summarize it in three bullet points." --image .\test_images\construction_site.png
 ```
 
-## 6. Example Outputs
+## 7. Example Outputs
 
 Verified example outputs are stored in `example_outputs/`. They show what the
 commands above looked like when they were run, without exposing the API key. See
